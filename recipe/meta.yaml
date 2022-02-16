@@ -1,4 +1,4 @@
-{% set version = '0.1.1' %}
+{% set version = "0.1.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/vetiver_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vetiver/vetiver_{{ version }}.tar.gz
-  sha256: f73b7eb50ce42917aa5fe7dee39a0633d18718ac29cb37e73638198ff9ab6760
+  sha256: 08cfa1086d9c5ac05902c6a291e83ae00227354552a1e3907cc6727d2f384c53
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -69,13 +69,11 @@ test:
 about:
   home: https://vetiver.tidymodels.org/, https://github.com/tidymodels/vetiver
   license: MIT
-  summary: The goal of 'vetiver' is to provide fluent tooling to version, share, deploy, and
-    monitor a trained model. Functions handle both recording and checking the model's
-    input data prototype, and predicting from a remote API endpoint. The 'vetiver' package
-    is extensible, with generics that can support many kinds of models.
+  summary: The goal of 'vetiver' is to provide fluent tooling to version, share, deploy, and monitor a trained model. Functions handle both recording and checking the model's input data prototype, and predicting from a remote API endpoint. The 'vetiver' package is extensible, with generics that can support many kinds of
+    models.
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
