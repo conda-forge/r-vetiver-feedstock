@@ -28,16 +28,19 @@ requirements:
     - r-base
     - r-butcher
     - r-cli
+    - r-curl
     - r-generics
     - r-glue
     - r-hardhat
     - r-httr
     - r-jsonlite
+    - r-lifecycle
     - r-pins >=1.0.0
     - r-plumber >=1.0.0
     - r-purrr
     - r-rapidoc
     - r-readr >=1.4.0
+    - r-renv
     - r-rlang
     - r-tibble
     - r-vctrs
@@ -46,16 +49,19 @@ requirements:
     - r-base
     - r-butcher
     - r-cli
+    - r-curl
     - r-generics
     - r-glue
     - r-hardhat
     - r-httr
     - r-jsonlite
+    - r-lifecycle
     - r-pins >=1.0.0
     - r-plumber >=1.0.0
     - r-purrr
     - r-rapidoc
     - r-readr >=1.4.0
+    - r-renv
     - r-rlang
     - r-tibble
     - r-vctrs
