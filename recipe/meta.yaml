@@ -79,6 +79,7 @@ test:
     - r-modeldata
     - r-ranger
     - r-slider >=0.2.2
+    - r-vdiffr
     - r-workflows
     - r-xgboost
     - r-yardstick
