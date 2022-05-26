@@ -72,6 +72,12 @@ requirements:
 test:
   requires:
     - r-testthat >=3.0.0
+    - r-caret
+    - r-dplyr
+    - r-mlr3
+    - r-ranger
+    - r-workflows
+    - r-xgboost
   source_files:
     - tests/testthat/
     - tests/testthat.R
