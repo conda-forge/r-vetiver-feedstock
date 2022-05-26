@@ -75,7 +75,9 @@ test:
     - r-caret
     - r-dplyr
     - r-mlr3
+    - r-mlr3learners
     - r-ranger
+    - r-slider >=0.2.2
     - r-workflows
     - r-xgboost
   source_files:
