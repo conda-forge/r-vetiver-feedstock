@@ -76,10 +76,12 @@ test:
     - r-dplyr
     - r-mlr3
     - r-mlr3learners
+    - r-modeldata
     - r-ranger
     - r-slider >=0.2.2
     - r-workflows
     - r-xgboost
+    - r-yardstick
   source_files:
     - tests/testthat/
     - tests/testthat.R
