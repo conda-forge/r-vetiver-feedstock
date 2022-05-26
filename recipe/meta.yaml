@@ -70,9 +70,16 @@ requirements:
     - r-withr
 
 test:
+  requires:
+    - r-testthat >=3.0.0
+  source_files:
+    - tests/testthat/
+    - tests/testthat/testthat.R
   commands:
-    - $R -e "library('vetiver')"           # [not win]
-    - "\"%R%\" -e \"library('vetiver')\""  # [win]
+    - $R -e "library('vetiver')"                          # [not win]
+    - $R -e "testthat::test_package('vetiver')"           # [not win]
+    - "\"%R%\" -e \"library('vetiver')\""                 # [win]
+    - "\"%R%\" -e \"testthat::test_package('vetiver')\""  # [win]
 
 about:
   home: https://vetiver.tidymodels.org/, https://github.com/tidymodels/vetiver
