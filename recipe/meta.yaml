@@ -35,7 +35,7 @@ requirements:
     - r-httr
     - r-jsonlite
     - r-lifecycle
-    - r-magrittr >= 2.0.3
+    - r-magrittr >=2.0.3
     - r-pins >=1.0.0
     - r-plumber >=1.0.0
     - r-purrr
@@ -57,7 +57,7 @@ requirements:
     - r-httr
     - r-jsonlite
     - r-lifecycle
-    - r-magrittr >= 2.0.3
+    - r-magrittr >=2.0.3
     - r-pins >=1.0.0
     - r-plumber >=1.0.0
     - r-purrr
