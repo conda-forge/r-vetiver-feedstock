@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -35,6 +35,7 @@ requirements:
     - r-httr
     - r-jsonlite
     - r-lifecycle
+    - r-magrittr >=2.0.3
     - r-pins >=1.0.0
     - r-plumber >=1.0.0
     - r-purrr
@@ -56,6 +57,7 @@ requirements:
     - r-httr
     - r-jsonlite
     - r-lifecycle
+    - r-magrittr >=2.0.3
     - r-pins >=1.0.0
     - r-plumber >=1.0.0
     - r-purrr
@@ -68,9 +70,27 @@ requirements:
     - r-withr
 
 test:
+  requires:
+    - r-testthat >=3.0.0
+    - r-caret
+    - r-dplyr
+    - r-mlr3
+    - r-mlr3learners
+    - r-modeldata
+    - r-ranger
+    - r-slider >=0.2.2
+    - r-vdiffr
+    - r-workflows
+    - r-xgboost
+    - r-yardstick
+  source_files:
+    - tests/testthat/
+    - tests/testthat.R
   commands:
-    - $R -e "library('vetiver')"           # [not win]
-    - "\"%R%\" -e \"library('vetiver')\""  # [win]
+    - $R -e "library('vetiver')"                                # [not win]
+    - $R -e "testthat::test_file('tests/testthat.R')"           # [not win]
+    - "\"%R%\" -e \"library('vetiver')\""                       # [win]
+    - "\"%R%\" -e \"testthat::test_file('tests/testthat.R')\""  # [win]
 
 about:
   home: https://vetiver.tidymodels.org/, https://github.com/tidymodels/vetiver
