@@ -87,9 +87,9 @@ test:
     - tests/testthat/
     - tests/testthat.R
   commands:
-    - $R -e "library('vetiver')"                                         # [not win]
+    - $R -e "library('vetiver')"                                # [not win]
     - $R -e "testthat::test_file('tests/testthat.R')"           # [not win]
-    - "\"%R%\" -e \"library('vetiver')\""                                # [win]
+    - "\"%R%\" -e \"library('vetiver')\""                       # [win]
     - "\"%R%\" -e \"testthat::test_file('tests/testthat.R')\""  # [win]
 
 about:
