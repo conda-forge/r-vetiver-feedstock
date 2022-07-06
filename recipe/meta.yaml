@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -74,10 +74,13 @@ test:
     - r-testthat >=3.0.0
     - r-caret
     - r-dplyr
+    - r-flexdashboard
     - r-mlr3
     - r-mlr3learners
     - r-modeldata
     - r-ranger
+    - r-rmarkdown >=2.12
+    - r-rsconnect
     - r-slider >=0.2.2
     - r-vdiffr
     - r-workflows
