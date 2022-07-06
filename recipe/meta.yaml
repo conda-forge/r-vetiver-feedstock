@@ -28,7 +28,7 @@ requirements:
     - r-base
     - r-butcher
     - r-cli
-    - r-curl
+    - r-fs
     - r-generics
     - r-glue
     - r-hardhat
@@ -42,7 +42,7 @@ requirements:
     - r-rapidoc
     - r-readr >=1.4.0
     - r-renv
-    - r-rlang
+    - r-rlang >=1.0.0
     - r-tibble
     - r-vctrs
     - r-withr
@@ -50,7 +50,7 @@ requirements:
     - r-base
     - r-butcher
     - r-cli
-    - r-curl
+    - r-fs
     - r-generics
     - r-glue
     - r-hardhat
@@ -64,7 +64,7 @@ requirements:
     - r-rapidoc
     - r-readr >=1.4.0
     - r-renv
-    - r-rlang
+    - r-rlang >=1.0.0
     - r-tibble
     - r-vctrs
     - r-withr
