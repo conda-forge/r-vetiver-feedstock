@@ -90,10 +90,10 @@ test:
     - tests/testthat/
     - tests/testthat.R
   commands:
-    - $R -e "library('vetiver')"                                                       # [not win]
-    - $R -e "testthat::test_file('tests/testthat.R', c('progress', 'fail'))"           # [not win]
-    - "\"%R%\" -e \"library('vetiver')\""                                              # [win]
-    - "\"%R%\" -e \"testthat::test_file('tests/testthat.R', c('progress', 'fail'))\""  # [win]
+    - $R -e "library('vetiver')"                                                                # [not win]
+    - $R -e "testthat::test_file('tests/testthat.R', c('location', 'check', 'fail'))"           # [not win]
+    - "\"%R%\" -e \"library('vetiver')\""                                                       # [win]
+    - "\"%R%\" -e \"testthat::test_file('tests/testthat.R', c('location', 'check', 'fail'))\""  # [win]
 
 about:
   home: https://vetiver.tidymodels.org/, https://github.com/tidymodels/vetiver
