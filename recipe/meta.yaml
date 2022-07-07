@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -74,10 +74,13 @@ test:
     - r-testthat >=3.0.0
     - r-caret
     - r-dplyr
+    - r-flexdashboard
     - r-mlr3
     - r-mlr3learners
     - r-modeldata
     - r-ranger
+    - r-rmarkdown >=2.12
+    - r-rsconnect
     - r-slider >=0.2.2
     - r-vdiffr
     - r-workflows
@@ -87,10 +90,10 @@ test:
     - tests/testthat/
     - tests/testthat.R
   commands:
-    - $R -e "library('vetiver')"                                # [not win]
-    - $R -e "testthat::test_file('tests/testthat.R')"           # [not win]
-    - "\"%R%\" -e \"library('vetiver')\""                       # [win]
-    - "\"%R%\" -e \"testthat::test_file('tests/testthat.R')\""  # [win]
+    - $R -e "library('vetiver')"                                                                # [not win]
+    - $R -e "testthat::test_file('tests/testthat.R', c('location', 'check', 'fail'))"           # [not win]
+    - "\"%R%\" -e \"library('vetiver')\""                                                       # [win]
+    - "\"%R%\" -e \"testthat::test_file('tests/testthat.R', c('location', 'check', 'fail'))\""  # [win]
 
 about:
   home: https://vetiver.tidymodels.org/, https://github.com/tidymodels/vetiver
