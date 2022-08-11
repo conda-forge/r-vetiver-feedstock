@@ -1,4 +1,4 @@
-{% set version = "0.1.6" %}
+{% set version = "0.1.7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/vetiver_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vetiver/vetiver_{{ version }}.tar.gz
-  sha256: bb4d09d41c58e08a97e5d65f65ca22595624f2da05b026794f0c373315365576
+  sha256: c41c0d2a1b16bc21e8d37b80ac4173546d2f5ecd420fb510fcb2a8b632d245da
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -104,7 +104,6 @@ about:
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
-
 extra:
   recipe-maintainers:
     - conda-forge/r
