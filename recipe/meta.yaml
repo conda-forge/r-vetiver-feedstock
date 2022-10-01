@@ -1,4 +1,4 @@
-{% set version = "0.1.7" %}
+{% set version = "0.1.8" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/vetiver_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vetiver/vetiver_{{ version }}.tar.gz
-  sha256: c41c0d2a1b16bc21e8d37b80ac4173546d2f5ecd420fb510fcb2a8b632d245da
+  sha256: f95e2f496fa3b28f7c9d16709996b7c7c29a8bd908d7282b9fe3651b430ad76b
 
 build:
   merge_build_host: true  # [win]
@@ -26,14 +26,13 @@ requirements:
     - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-bundle
     - r-butcher
     - r-cli
     - r-fs
     - r-generics
     - r-glue
     - r-hardhat
-    - r-httr
-    - r-jsonlite
     - r-lifecycle
     - r-magrittr >=2.0.3
     - r-pins >=1.0.0
@@ -48,14 +47,13 @@ requirements:
     - r-withr
   run:
     - r-base
+    - r-bundle
     - r-butcher
     - r-cli
     - r-fs
     - r-generics
     - r-glue
     - r-hardhat
-    - r-httr
-    - r-jsonlite
     - r-lifecycle
     - r-magrittr >=2.0.3
     - r-pins >=1.0.0
@@ -108,25 +106,3 @@ extra:
   recipe-maintainers:
     - conda-forge/r
     - mfansler
-
-# Package: vetiver
-# Title: Version, Share, Deploy, and Monitor Models
-# Version: 0.1.1
-# Authors@R: c( person("Julia", "Silge", , "julia.silge@rstudio.com", role = c("cre", "aut"), comment = c(ORCID = "0000-0002-3671-836X")), person("RStudio", role = c("cph", "fnd")) )
-# Description: The goal of 'vetiver' is to provide fluent tooling to version, share, deploy, and monitor a trained model. Functions handle both recording and checking the model's input data prototype, and predicting from a remote API endpoint. The 'vetiver' package is extensible, with generics that can support many kinds of models.
-# License: MIT + file LICENSE
-# URL: https://vetiver.tidymodels.org/, https://github.com/tidymodels/vetiver
-# BugReports: https://github.com/tidymodels/vetiver/issues
-# Imports: butcher, cli, generics, glue, hardhat, httr, jsonlite, pins (>= 1.0.0), plumber (>= 1.0.0), purrr, rapidoc, readr (>= 1.4.0), rlang, tibble, vctrs, withr
-# Suggests: caret, covr, knitr, LiblineaR, mlr3, mlr3learners, modeldata, parsnip, ranger, recipes, rmarkdown, rpart, rsconnect, testthat (>= 3.0.0), workflows, xgboost
-# Config/Needs/website: tidyverse/tidytemplate
-# Config/testthat/edition: 3
-# Encoding: UTF-8
-# RoxygenNote: 7.1.2
-# VignetteBuilder: knitr
-# NeedsCompilation: no
-# Packaged: 2022-01-07 17:57:52 UTC; juliasilge
-# Author: Julia Silge [cre, aut] (<https://orcid.org/0000-0002-3671-836X>), RStudio [cph, fnd]
-# Maintainer: Julia Silge <julia.silge@rstudio.com>
-# Repository: CRAN
-# Date/Publication: 2022-01-07 18:10:02 UTC
