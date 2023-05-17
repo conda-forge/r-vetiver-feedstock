@@ -3,11 +3,13 @@ About r-vetiver-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-vetiver-feedstock/blob/main/LICENSE.txt)
 
-Home: https://vetiver.tidymodels.org/, https://github.com/tidymodels/vetiver
+Home: https://vetiver.tidymodels.org/
 
 Package license: MIT
 
 Summary: The goal of 'vetiver' is to provide fluent tooling to version, share, deploy, and monitor a trained model. Functions handle both recording and checking the model's input data prototype, and predicting from a remote API endpoint. The 'vetiver' package is extensible, with generics that can support many kinds of models.
+
+Development: https://github.com/tidymodels/vetiver
 
 Current build status
 ====================
