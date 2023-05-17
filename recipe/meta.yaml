@@ -73,6 +73,7 @@ test:
     - r-flexdashboard
     - r-mlr3
     - r-mlr3learners
+    - r-mockery
     - r-modeldata
     - r-plumber >=1.0.0
     - r-ranger
@@ -106,4 +107,3 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - mfansler
