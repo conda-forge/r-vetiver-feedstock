@@ -29,6 +29,7 @@ requirements:
     - r-bundle
     - r-butcher >=0.3.1
     - r-cli
+    - r-ellipsis
     - r-fs
     - r-generics
     - r-glue
@@ -39,7 +40,7 @@ requirements:
     - r-purrr
     - r-rapidoc
     - r-readr >=1.4.0
-    - r-rlang >=1.0.0
+    - r-rlang >=1.1.0
     - r-tibble
     - r-vctrs
     - r-withr
@@ -48,6 +49,7 @@ requirements:
     - r-bundle
     - r-butcher >=0.3.1
     - r-cli
+    - r-ellipsis
     - r-fs
     - r-generics
     - r-glue
@@ -58,14 +60,14 @@ requirements:
     - r-purrr
     - r-rapidoc
     - r-readr >=1.4.0
-    - r-rlang >=1.0.0
+    - r-rlang >=1.1.0
     - r-tibble
     - r-vctrs
     - r-withr
 
 test:
   requires:
-    - r-testthat >=3.0.0
+    - r-testthat >=3.1.8
     - r-caret
     - r-dplyr
     - r-flexdashboard
@@ -85,13 +87,14 @@ test:
     - tests/testthat/
     - tests/testthat.R
   commands:
-    - $R -e "library('vetiver')"                                                                # [not win]
-    - $R -e "testthat::test_file('tests/testthat.R', c('location', 'check', 'fail'))"           # [not win]
-    - "\"%R%\" -e \"library('vetiver')\""                                                       # [win]
-    - "\"%R%\" -e \"testthat::test_file('tests/testthat.R', c('location', 'check', 'fail'))\""  # [win]
+    - $R -e "library('vetiver')"                                                      # [not win]
+    - $R -e "testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)"           # [not win]
+    - "\"%R%\" -e \"library('vetiver')\""                                             # [win]
+    - "\"%R%\" -e \"testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)\""  # [win]
 
 about:
-  home: https://vetiver.tidymodels.org/, https://github.com/tidymodels/vetiver
+  home: https://vetiver.tidymodels.org/
+  dev_url: https://github.com/tidymodels/vetiver
   license: MIT
   summary: The goal of 'vetiver' is to provide fluent tooling to version, share, deploy, and monitor a trained model. Functions handle both recording and checking the model's input data prototype, and predicting from a remote API endpoint. The 'vetiver' package is extensible, with generics that can support many kinds of
     models.
