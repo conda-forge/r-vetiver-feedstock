@@ -1,4 +1,4 @@
-{% set version = "0.2.0" %}
+{% set version = "0.2.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/vetiver_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vetiver/vetiver_{{ version }}.tar.gz
-  sha256: 9acf16d9ad34b0cddf901fcdd32f60f2e0ca138567e614a1b02d93cf87c1cad3
+  sha256: 54e378f75ca7caa2614dd71f059f27ef9ee9f20f7f0d0700bb69c2a0f3f1865f
 
 build:
   merge_build_host: true  # [win]
@@ -29,6 +29,7 @@ requirements:
     - r-bundle
     - r-butcher >=0.3.1
     - r-cli
+    - r-ellipsis
     - r-fs
     - r-generics
     - r-glue
@@ -39,7 +40,7 @@ requirements:
     - r-purrr
     - r-rapidoc
     - r-readr >=1.4.0
-    - r-rlang >=1.0.0
+    - r-rlang >=1.1.0
     - r-tibble
     - r-vctrs
     - r-withr
@@ -48,6 +49,7 @@ requirements:
     - r-bundle
     - r-butcher >=0.3.1
     - r-cli
+    - r-ellipsis
     - r-fs
     - r-generics
     - r-glue
@@ -58,19 +60,20 @@ requirements:
     - r-purrr
     - r-rapidoc
     - r-readr >=1.4.0
-    - r-rlang >=1.0.0
+    - r-rlang >=1.1.0
     - r-tibble
     - r-vctrs
     - r-withr
 
 test:
   requires:
-    - r-testthat >=3.0.0
+    - r-testthat >=3.1.8
     - r-caret
     - r-dplyr
     - r-flexdashboard
     - r-mlr3
     - r-mlr3learners
+    - r-mockery
     - r-modeldata
     - r-plumber >=1.0.0
     - r-ranger
@@ -85,13 +88,14 @@ test:
     - tests/testthat/
     - tests/testthat.R
   commands:
-    - $R -e "library('vetiver')"                                                                # [not win]
-    - $R -e "testthat::test_file('tests/testthat.R', c('location', 'check', 'fail'))"           # [not win]
-    - "\"%R%\" -e \"library('vetiver')\""                                                       # [win]
-    - "\"%R%\" -e \"testthat::test_file('tests/testthat.R', c('location', 'check', 'fail'))\""  # [win]
+    - $R -e "library('vetiver')"                                                      # [not win]
+    - $R -e "testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)"           # [not win]
+    - "\"%R%\" -e \"library('vetiver')\""                                             # [win]
+    - "\"%R%\" -e \"testthat::test_file('tests/testthat.R', stop_on_failure=TRUE)\""  # [win]
 
 about:
-  home: https://vetiver.tidymodels.org/, https://github.com/tidymodels/vetiver
+  home: https://vetiver.tidymodels.org/
+  dev_url: https://github.com/tidymodels/vetiver
   license: MIT
   summary: The goal of 'vetiver' is to provide fluent tooling to version, share, deploy, and monitor a trained model. Functions handle both recording and checking the model's input data prototype, and predicting from a remote API endpoint. The 'vetiver' package is extensible, with generics that can support many kinds of
     models.
@@ -103,4 +107,3 @@ about:
 extra:
   recipe-maintainers:
     - conda-forge/r
-    - mfansler
