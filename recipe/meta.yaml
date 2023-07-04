@@ -28,6 +28,7 @@ requirements:
     - r-base
     - r-bundle
     - r-butcher >=0.3.1
+    - r-cereal
     - r-cli
     - r-ellipsis
     - r-fs
@@ -36,7 +37,7 @@ requirements:
     - r-hardhat
     - r-lifecycle
     - r-magrittr >=2.0.3
-    - r-pins >=1.1.0
+    - r-pins >=1.2.0
     - r-purrr
     - r-rapidoc
     - r-readr >=1.4.0
@@ -48,6 +49,7 @@ requirements:
     - r-base
     - r-bundle
     - r-butcher >=0.3.1
+    - r-cereal
     - r-cli
     - r-ellipsis
     - r-fs
@@ -56,7 +58,7 @@ requirements:
     - r-hardhat
     - r-lifecycle
     - r-magrittr >=2.0.3
-    - r-pins >=1.1.0
+    - r-pins >=1.2.0
     - r-purrr
     - r-rapidoc
     - r-readr >=1.4.0
