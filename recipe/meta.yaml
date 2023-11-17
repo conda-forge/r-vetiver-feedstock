@@ -1,4 +1,4 @@
-{% set version = "0.2.4" %}
+{% set version = "0.2.5" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/vetiver_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vetiver/vetiver_{{ version }}.tar.gz
-  sha256: 83fbac39a80a7cdad523030eff8318621953b6f219ad2eb2fe1ee7c1c945dfa7
+  sha256: 0b6852a357c796e03361cd1248100f0ec9f0e6cd0d75e2deec20ff4d20c9f711
 
 build:
   merge_build_host: true  # [win]
