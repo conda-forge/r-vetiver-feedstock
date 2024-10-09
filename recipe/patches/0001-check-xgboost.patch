@@ -1,0 +1,21 @@
+From 7df5886c6124f597a96d940253874b51809cd92f Mon Sep 17 00:00:00 2001
+From: Mervin Fansler <mervin.fansler@bric.ku.dk>
+Date: Wed, 9 Oct 2024 14:51:10 +0200
+Subject: [PATCH] check xgboost
+
+---
+ tests/testthat/test-mlr3.R | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/tests/testthat/test-mlr3.R b/tests/testthat/test-mlr3.R
+index 67ecf03d..526bd813 100644
+--- a/tests/testthat/test-mlr3.R
++++ b/tests/testthat/test-mlr3.R
+@@ -28,6 +28,7 @@ test_that("mlr3 learners can be pinned", {
+ 
+ test_that("learners from mlr3learners can be pinned", {
+     skip_if_not_installed("mlr3learners")
++    skip_if_not_installed("xgboost")
+ 
+     task =  mlr3::tsk("spam")
+     learner = mlr3learners::LearnerClassifXgboost$new()
