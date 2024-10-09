@@ -14,7 +14,7 @@ source:
 
 build:
   merge_build_host: true  # [win]
-  number: 0
+  number: 1
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -85,7 +85,7 @@ test:
     - r-slider >=0.2.2
     - r-vdiffr
     - r-workflows
-    - r-xgboost
+    # - r-xgboost
     - r-yardstick
   source_files:
     - tests/
