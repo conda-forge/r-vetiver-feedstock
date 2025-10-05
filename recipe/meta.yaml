@@ -14,7 +14,7 @@ source:
     - patches/0001-check-xgboost.patch
 
 build:
-  number: 2
+  number: 3
   noarch: generic
   rpaths:
     - lib/R/lib/
