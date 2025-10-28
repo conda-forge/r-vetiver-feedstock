@@ -1,4 +1,4 @@
-{% set version = "0.2.5" %}
+{% set version = "0.2.6" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,12 +9,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/vetiver_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vetiver/vetiver_{{ version }}.tar.gz
-  sha256: 0b6852a357c796e03361cd1248100f0ec9f0e6cd0d75e2deec20ff4d20c9f711
+  sha256: e696aa71a32f2c7e51f7bc88cbb391f44ba74757f27ab1dda312e1cc75d1e606
   patches:
     - patches/0001-check-xgboost.patch
 
 build:
-  number: 3
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
