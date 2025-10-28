@@ -10,8 +10,6 @@ source:
     - {{ cran_mirror }}/src/contrib/vetiver_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vetiver/vetiver_{{ version }}.tar.gz
   sha256: e696aa71a32f2c7e51f7bc88cbb391f44ba74757f27ab1dda312e1cc75d1e606
-  patches:
-    - patches/0001-check-xgboost.patch
 
 build:
   number: 0
@@ -30,7 +28,6 @@ requirements:
     - r-butcher >=0.3.1
     - r-cereal
     - r-cli
-    - r-ellipsis
     - r-fs
     - r-generics
     - r-glue
@@ -51,7 +48,6 @@ requirements:
     - r-butcher >=0.3.1
     - r-cereal
     - r-cli
-    - r-ellipsis
     - r-fs
     - r-generics
     - r-glue
@@ -80,7 +76,7 @@ test:
     - r-modeldata
     - r-plumber >=1.0.0
     - r-ranger
-    - r-rmarkdown >=2.12
+    - r-rmarkdown
     - r-rsconnect
     - r-slider >=0.2.2
     - r-vdiffr
