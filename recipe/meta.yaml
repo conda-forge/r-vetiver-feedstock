@@ -1,4 +1,4 @@
-{% set version = "0.2.6" %}
+{% set version = "0.2.7" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/vetiver_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/vetiver/vetiver_{{ version }}.tar.gz
-  sha256: e696aa71a32f2c7e51f7bc88cbb391f44ba74757f27ab1dda312e1cc75d1e606
+  sha256: 53a1ca4f516c6f2f4e691d418a71938bce9c9fad0b8a6f877a22e36bd52d1adb
 
 build:
   number: 0
